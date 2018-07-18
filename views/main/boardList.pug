@@ -3,9 +3,11 @@ html
   head
     title 게시판
     meta(charset='utf-8')
+    script(src='/js/board.js')
   body
-    h1
-      a(href='/main/boardList') Server Side JavaScript
+
+    include ../includes/header.pug
+
     ul
       each list in boardList
         li
@@ -14,3 +16,6 @@ html
     article
       h2= title
       div= content
+
+    div
+      input(type='button' value='글쓰기' onclick='writeBoard()')

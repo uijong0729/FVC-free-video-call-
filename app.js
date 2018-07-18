@@ -12,6 +12,8 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 //static파일
 app.use(express.static('public'));
+app.use(express.static('uploads'));
+app.use('user', express.static('uploads'));
 
 var mainer = require('./server/routes/mainController.js');
 app.use('/main', mainer);

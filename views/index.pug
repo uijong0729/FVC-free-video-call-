@@ -3,6 +3,7 @@ html
   head
     title 메인화면
     meta(charset='utf-8')
+    script(src="/js/board.js")
   body
     video(id='localVideo' autoplay playsinline)
     video(id='remoteVideo' autoplay playsinline)
@@ -10,6 +11,8 @@ html
       button(id='startButton')
       button(id='callButton')
       button(id='hangupButton')
+
+    button(value='글쓰기' onclick='goBoardWrite()')
 
     script(src='https://webrtc.github.io/adapter/adapter-latest.js')
     script(src='/js/main.js')

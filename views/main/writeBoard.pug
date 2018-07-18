@@ -4,7 +4,11 @@ html
     title 게시판
     meta(charset='utf-8')
   body
-    form(action='/main/boardList' method='post')
-      input(name='title')
-      textarea(name='content')
-      input(type='submit')
+
+    include ../includes/header.pug
+
+    acticle
+      form(action='/main/boardList' method='post')
+        input(name='title')
+        textarea(name='content')
+        input(type='submit')
