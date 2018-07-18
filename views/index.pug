@@ -2,4 +2,14 @@ doctype html
 html
   head
     title 메인화면
-    meta(charset=
+    meta(charset='utf-8')
+  body
+    video(id='localVideo' autoplay playsinline)
+    video(id='remoteVideo' autoplay playsinline)
+    div
+      button(id='startButton')
+      button(id='callButton')
+      button(id='hangupButton')
+
+    script(src='https://webrtc.github.io/adapter/adapter-latest.js')
+    script(src='/js/main.js')

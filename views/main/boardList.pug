@@ -1,0 +1,16 @@
+doctype html
+html
+  head
+    title 게시판
+    meta(charset='utf-8')
+  body
+    h1
+      a(href='/main/boardList') Server Side JavaScript
+    ul
+      each list in boardList
+        li
+          a(href='/main/boardList/'+list)= list
+
+    article
+      h2= title
+      div= content
