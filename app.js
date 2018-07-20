@@ -1,22 +1,23 @@
-var express = require('express');
+const express = require('express');
 const bodyParser = require('body-parser');
-var app = express();
+const mainer = require('./server/routes/mainController.js'); //라우터
+const app = express();
+const dbcon = require('./dbinit.js');
+
+
 
 //pug세팅
 app.set('views', './views'); // ./인경우 현재경로
 app.set('view engine', 'pug');
 app.locals.pretty = true;
 
-//post
-app.use(bodyParser.urlencoded({ extended: false }));
-
 //static파일
 app.use(express.static('public'));
 app.use(express.static('uploads'));
 app.use('user', express.static('uploads'));
 
-var mainer = require('./server/routes/mainController.js');
-app.use('/main', mainer);
+app.use('/main', mainer); //라우터
+app.use(bodyParser.urlencoded({ extended: false }));  //post
 
 app.get('/', (req, res)=>{
     res.render('index');
