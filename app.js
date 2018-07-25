@@ -2,8 +2,8 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const mainer = require('./server/routes/mainController.js'); //라우터
 const app = express();
-const dbcon = require('./dbinit.js');
-
+//const dbcon = require('./dbinit.js');
+const dbcon = require('./dbmongooseinit.js');
 
 
 //pug세팅
