@@ -3,16 +3,9 @@ html
   head
     title 메인화면
     meta(charset='utf-8')
-    script(src="/js/board.js")
+    link(rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css')
+    scirpt(src='http://code.jquery.com/jquery-latest.min.js')
+    scirpt(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js')
+
   body
-    video(id='localVideo' autoplay playsinline)
-    video(id='remoteVideo' autoplay playsinline)
-    div
-      button(id='startButton')
-      button(id='callButton')
-      button(id='hangupButton')
-
-    button(value='글쓰기' onclick='goBoardWrite()')
-
-    script(src='https://webrtc.github.io/adapter/adapter-latest.js')
-    script(src='/js/main.js')
+    h1 가계부
