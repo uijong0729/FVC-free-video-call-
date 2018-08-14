@@ -1,14 +1,15 @@
 doctype html
 html
   head
-    title 게시판
+    title 신규작성
     meta(charset='utf-8')
+    
   body
-
-    include ../includes/header.pug
-
-    acticle
-      form(action='/main/boardList' method='post')
-        input(name='title')
-        textarea(name='content')
-        input(type='submit')
+        p
+          b 지출명
+          input(id='title')
+        p
+          b 지출액
+          input(id='gold')
+        p
+          input(type='submit' value='완료')

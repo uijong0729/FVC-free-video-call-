@@ -24,6 +24,9 @@ var stor = multer.diskStorage({
 
 var upload = multer({ storage: stor });
 
+mainer.get('/create', (req,res)=>{
+  res.render('main/writeBoard');
+});
 
 mainer.get('/upload', (req, res)=>{
   res.render('main/uploadBoard');
@@ -36,11 +39,6 @@ mainer.post('/upload', upload.single('userfile'), (req, res)=>{
   //기본기능에서는 파일이름이 랜덤생성되어 추가된다.
   res.send('uploading : ' + req.file.filename);
   console.log(req.file);
-});
-
-mainer.get('/writeBoard', (req, res)=>{
-
-  res.render('main/writeBoard');
 });
 
 mainer.get(['/', '/boardList', '/boardList/:title'], (req, res)=>{
